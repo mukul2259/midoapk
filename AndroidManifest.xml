@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.system" android:versionCode="1" android:versionName="1.0" package="com.quicinc.cne.CNEService" coreApp="true" platformBuildVersionCode="24" platformBuildVersionName="7.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="broadcast.cne.permission" />
+    <uses-permission android:name="android.permission.PACKET_KEEPALIVE_OFFLOAD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="broadcast.cne.permission" android:protectionLevel="signature" />
+    <application android:name="CNEServiceApp" android:persistent="true" android:process=".dataservices">
+        <uses-library android:name="com.quicinc.cne" />
+    </application>
+</manifest>
